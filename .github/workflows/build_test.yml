@@ -32,7 +32,7 @@ jobs:
 
       - name: Run twister
         run: |
-          west build -b qemu_x86 modules/lib/golioth/samples/hello
+          west build -b qemu_x86 modules/lib/golioth/samples/hello -- -DCMAKE_FIND_DEBUG_MODE=1
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v2
