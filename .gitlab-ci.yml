@@ -116,4 +116,6 @@ pre-commit:
 twister:
   extends: .twister
   script:
+    - whoami
+    - echo ${HOME}
     - west build -b qemu_x86 modules/lib/golioth/samples/hello -- -DCMAKE_FIND_DEBUG_MODE=1
