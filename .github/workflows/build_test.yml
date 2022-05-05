@@ -34,7 +34,7 @@ jobs:
 
       - name: Run twister
         run: |
-          zephyr/scripts/twister -T modules/lib/golioth
+          west build -b qemu_x86 modules/lib/golioth/samples/hello
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v2
