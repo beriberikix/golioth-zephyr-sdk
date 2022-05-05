@@ -116,6 +116,11 @@ pre-commit:
 twister:
   extends: .twister
   script:
+    - whoami
+    - rm -rf ${HOME}/.cache/zephyr
+    - rm -rf twister*
+    - rm -rf build*
+    - rm -rf reports*
     - >
       zephyr/scripts/twister -T modules/lib/golioth
 
