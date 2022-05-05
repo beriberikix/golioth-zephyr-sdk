@@ -117,11 +117,7 @@ twister:
   extends: .twister
   script:
     - >
-      zephyr/scripts/twister
-      -p nrf52840dk_nrf52840
-      -p qemu_x86
-      -o reports
-      -T modules/lib/golioth
+      zephyr/scripts/twister -T modules/lib/golioth
 
 twister-esp:
   extends: .twister
