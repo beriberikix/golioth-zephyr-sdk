@@ -117,6 +117,7 @@ twister:
   extends: .twister
   script:
     - whoami
+    - printenv
     - rm -rf ${HOME}/.cache/zephyr
     - rm -rf twister*
     - rm -rf build*
